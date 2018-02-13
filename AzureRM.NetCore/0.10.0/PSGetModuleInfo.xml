@@ -1,0 +1,249 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">AzureRM.Netcore</S>
+      <S N="Version">0.10.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">[PowerShell .Net Core] Azure Resource Manager Module</S>
+      <S N="Author">Microsoft Corporation</S>
+      <S N="CompanyName">azure-sdk</S>
+      <S N="Copyright">Microsoft Corporation. All rights reserved.</S>
+      <DT N="PublishedDate">2018-02-13T02:02:05-05:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://aka.ms/azps-license</URI>
+      <URI N="ProjectUri">https://github.com/Azure/azure-powershell</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PSModule</S>
+          <S>PSEdition_Core</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">Workflow</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <S N="ReleaseNotes">## 2017.04.05 - Version 3.8.0_x000D__x000A_* Compute_x000D__x000A_    * Fix bug in Get-* cmdlets, to allow retrieving multiple pages of data (more than 120 items)_x000D__x000A_* DataLakeAnalytics_x000D__x000A_    * Fix help for some commands to have the proper verbage and examples._x000D__x000A_* DataLakeStore_x000D__x000A_    * Add support for head and tail to the `Get-AzureRMDataLakeStoreItemContent` cmdlet. This enables returning the top N or last N new line delimited rows to be displayed._x000D__x000A_* HDInsight_x000D__x000A_    * Added support for RServer cluster type_x000D__x000A_        - Edgenode VM size can be specified for RServer cluster in New-AzureRmHDInsightCluster or New-AzureRmHDInsightClusterConfig_x000D__x000A_        - RServer is now a configuration option in Add-AzureRmHDInsightConfigValues. It allows for RStudio flag to be set to indicate that R Studio installation should be done._x000D__x000A_* LogicApp_x000D__x000A_    * Set-AzureRmIntegrationAccountSchema and Set-AzureRmIntegrationAccountMap cmdlets are fixed for the contentlink issue(Both content and contentlink were set resulting in update failure). _x000D__x000A_* Network_x000D__x000A_    * Added support for new web application firewall features to Application Gateways_x000D__x000A_        - Added New-AzureRmApplicationGatewayFirewallDisabledRuleGroupConfig_x000D__x000A_        - Added Get-AzureRmApplicationGatewayAvailableWafRuleSets (Alias: List-AzureRmApplicationGatewayAvailableWafRuleSets)_x000D__x000A_        - Updated New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration: Added parameter -RuleSetType -RuleSetVersion and -DisabledRuleGroups_x000D__x000A_        - Updated Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration: Added parameter -RuleSetType -RuleSetVersion and -DisabledRuleGroups_x000D__x000A_    * Added support for IPSec policies to Virtual Network Gateway Connections_x000D__x000A_        - Added New-AzureRmIpsecPolicy_x000D__x000A_        - Updated New-AzureRmVirtualNetworkGatewayConnection: Added parameter -IpsecPolicies and -UsePolicyBasedTrafficSelectors_x000D__x000A_* Profile_x000D__x000A_    * *Obsolete*: Save-AzureRmProfile is renamed to Save-AzureRmContext, there is an alias to the old cmdlet name, the alias will be removed in the next release._x000D__x000A_    * *Obsolete*: Select-AzureRmProfile is renamed to Import-AzureRmContext, there is an alias to the old cmdlet name, the alias will be removed in the next release._x000D__x000A_    * The PSAzureContext and PSAzureProfile output types of profile cmdlets will be changed in the next release._x000D__x000A_    * The Save-AzureRmContext cmdlet will have no OutputType in the next release._x000D__x000A_    * Fix bug in cmdlet common code to use FIPS-compliant algorithm for data hashes: https://github.com/Azure/azure-powershell/issues/3651 _x000D__x000A_* Sql_x000D__x000A_    * Bug fixes on Azure Failover Group Cmdlets_x000D__x000A_        - Fix for operation polling_x000D__x000A_        - Fix GracePeriodWithDataLossHour value when setting FailoverPolicy to Manual_x000D__x000A_* TrafficManager_x000D__x000A_    * Support for the Geographic traffic routing method_x000D__x000A_        - New value 'Geographic' for the TrafficRoutingMethod parameter of New-AzureRmTrafficManagerProfile_x000D__x000A_        - New parameter 'GeoMapping' for the New-AzureRmTrafficManagerEndpoint and Add-AzureRmTrafficManagerEndpointConfig_x000D__x000A_        - Fix piping for Get-AzureRmTrafficManagerProfile when it returns a collection of profiles_x000D__x000A_* ServiceManagement_x000D__x000A_    * Add initiate maintenance PowerShell cmdlet._x000D__x000A_    * Add Maintenance Status field to Get-AzureVM response._x000D__x000A_    * Added new cmdlets to support Recovery Services vault upgrade_x000D__x000A_        - Test-AzureRecoveryServicesVaultUpgrade_x000D__x000A_        - Invoke-AzureRecoveryServicesVaultUpgrade</S>
+      <Obj N="Dependencies" RefId="4">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="5">
+            <TN RefId="3">
+              <T>System.Collections.Specialized.OrderedDictionary</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">AzureRM.Profile.Netcore</S>
+              </En>
+              <En>
+                <S N="Key">RequiredVersion</S>
+                <S N="Value">0.10.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:AzureRM.Profile.Netcore/[0.10.0]</S>
+              </En>
+            </DCT>
+          </Obj>
+          <Obj RefId="6">
+            <TNRef RefId="3" />
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">AzureRM.Compute.Netcore</S>
+              </En>
+              <En>
+                <S N="Key">RequiredVersion</S>
+                <S N="Value">0.10.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:AzureRM.Compute.Netcore/[0.10.0]</S>
+              </En>
+            </DCT>
+          </Obj>
+          <Obj RefId="7">
+            <TNRef RefId="3" />
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">AzureRM.KeyVault.Netcore</S>
+              </En>
+              <En>
+                <S N="Key">RequiredVersion</S>
+                <S N="Value">0.10.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:AzureRM.KeyVault.Netcore/[0.10.0]</S>
+              </En>
+            </DCT>
+          </Obj>
+          <Obj RefId="8">
+            <TNRef RefId="3" />
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">AzureRM.Network.Netcore</S>
+              </En>
+              <En>
+                <S N="Key">RequiredVersion</S>
+                <S N="Value">0.10.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:AzureRM.Network.Netcore/[0.10.0]</S>
+              </En>
+            </DCT>
+          </Obj>
+          <Obj RefId="9">
+            <TNRef RefId="3" />
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">AzureRM.Resources.Netcore</S>
+              </En>
+              <En>
+                <S N="Key">RequiredVersion</S>
+                <S N="Value">0.10.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:AzureRM.Resources.Netcore/[0.10.0]</S>
+              </En>
+            </DCT>
+          </Obj>
+          <Obj RefId="10">
+            <TNRef RefId="3" />
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">AzureRM.Storage.Netcore</S>
+              </En>
+              <En>
+                <S N="Key">RequiredVersion</S>
+                <S N="Value">0.10.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:AzureRM.Storage.Netcore/[0.10.0]</S>
+              </En>
+            </DCT>
+          </Obj>
+          <Obj RefId="11">
+            <TNRef RefId="3" />
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">AzureRM.Tags.Netcore</S>
+              </En>
+              <En>
+                <S N="Key">RequiredVersion</S>
+                <S N="Value">0.10.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:AzureRM.Tags.Netcore/[0.10.0]</S>
+              </En>
+            </DCT>
+          </Obj>
+          <Obj RefId="12">
+            <TNRef RefId="3" />
+            <DCT>
+              <En>
+                <S N="Key">Name</S>
+                <S N="Value">AzureRM.Websites.Netcore</S>
+              </En>
+              <En>
+                <S N="Key">RequiredVersion</S>
+                <S N="Value">0.10.0</S>
+              </En>
+              <En>
+                <S N="Key">CanonicalId</S>
+                <S N="Value">nuget:AzureRM.Websites.Netcore/[0.10.0]</S>
+              </En>
+            </DCT>
+          </Obj>
+        </LST>
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2/</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="13">
+        <TN RefId="4">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">Microsoft Corporation. All rights reserved.</S>
+          <S N="description">[PowerShell .Net Core] Azure Resource Manager Module</S>
+          <S N="requireLicenseAcceptance">True</S>
+          <S N="releaseNotes">## 2017.04.05 - Version 3.8.0_x000D__x000A_* Compute_x000D__x000A_    * Fix bug in Get-* cmdlets, to allow retrieving multiple pages of data (more than 120 items)_x000D__x000A_* DataLakeAnalytics_x000D__x000A_    * Fix help for some commands to have the proper verbage and examples._x000D__x000A_* DataLakeStore_x000D__x000A_    * Add support for head and tail to the `Get-AzureRMDataLakeStoreItemContent` cmdlet. This enables returning the top N or last N new line delimited rows to be displayed._x000D__x000A_* HDInsight_x000D__x000A_    * Added support for RServer cluster type_x000D__x000A_        - Edgenode VM size can be specified for RServer cluster in New-AzureRmHDInsightCluster or New-AzureRmHDInsightClusterConfig_x000D__x000A_        - RServer is now a configuration option in Add-AzureRmHDInsightConfigValues. It allows for RStudio flag to be set to indicate that R Studio installation should be done._x000D__x000A_* LogicApp_x000D__x000A_    * Set-AzureRmIntegrationAccountSchema and Set-AzureRmIntegrationAccountMap cmdlets are fixed for the contentlink issue(Both content and contentlink were set resulting in update failure). _x000D__x000A_* Network_x000D__x000A_    * Added support for new web application firewall features to Application Gateways_x000D__x000A_        - Added New-AzureRmApplicationGatewayFirewallDisabledRuleGroupConfig_x000D__x000A_        - Added Get-AzureRmApplicationGatewayAvailableWafRuleSets (Alias: List-AzureRmApplicationGatewayAvailableWafRuleSets)_x000D__x000A_        - Updated New-AzureRmApplicationGatewayWebApplicationFirewallConfiguration: Added parameter -RuleSetType -RuleSetVersion and -DisabledRuleGroups_x000D__x000A_        - Updated Set-AzureRmApplicationGatewayWebApplicationFirewallConfiguration: Added parameter -RuleSetType -RuleSetVersion and -DisabledRuleGroups_x000D__x000A_    * Added support for IPSec policies to Virtual Network Gateway Connections_x000D__x000A_        - Added New-AzureRmIpsecPolicy_x000D__x000A_        - Updated New-AzureRmVirtualNetworkGatewayConnection: Added parameter -IpsecPolicies and -UsePolicyBasedTrafficSelectors_x000D__x000A_* Profile_x000D__x000A_    * *Obsolete*: Save-AzureRmProfile is renamed to Save-AzureRmContext, there is an alias to the old cmdlet name, the alias will be removed in the next release._x000D__x000A_    * *Obsolete*: Select-AzureRmProfile is renamed to Import-AzureRmContext, there is an alias to the old cmdlet name, the alias will be removed in the next release._x000D__x000A_    * The PSAzureContext and PSAzureProfile output types of profile cmdlets will be changed in the next release._x000D__x000A_    * The Save-AzureRmContext cmdlet will have no OutputType in the next release._x000D__x000A_    * Fix bug in cmdlet common code to use FIPS-compliant algorithm for data hashes: https://github.com/Azure/azure-powershell/issues/3651 _x000D__x000A_* Sql_x000D__x000A_    * Bug fixes on Azure Failover Group Cmdlets_x000D__x000A_        - Fix for operation polling_x000D__x000A_        - Fix GracePeriodWithDataLossHour value when setting FailoverPolicy to Manual_x000D__x000A_* TrafficManager_x000D__x000A_    * Support for the Geographic traffic routing method_x000D__x000A_        - New value 'Geographic' for the TrafficRoutingMethod parameter of New-AzureRmTrafficManagerProfile_x000D__x000A_        - New parameter 'GeoMapping' for the New-AzureRmTrafficManagerEndpoint and Add-AzureRmTrafficManagerEndpointConfig_x000D__x000A_        - Fix piping for Get-AzureRmTrafficManagerProfile when it returns a collection of profiles_x000D__x000A_* ServiceManagement_x000D__x000A_    * Add initiate maintenance PowerShell cmdlet._x000D__x000A_    * Add Maintenance Status field to Get-AzureVM response._x000D__x000A_    * Added new cmdlets to support Recovery Services vault upgrade_x000D__x000A_        - Test-AzureRecoveryServicesVaultUpgrade_x000D__x000A_        - Invoke-AzureRecoveryServicesVaultUpgrade</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">16</S>
+          <S N="downloadCount">6780</S>
+          <S N="packageSize">7480</S>
+          <S N="published">2/13/18 2:02:05 AM -05:00</S>
+          <S N="created">2/13/18 2:02:05 AM -05:00</S>
+          <S N="tags">PSModule PSEdition_Core</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2018-02-13T11:09:43Z</S>
+          <S N="NormalizedVersion">0.10.0</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">AzureRM.Netcore.nuspec|AzureRM.Netcore.psd1|AzureRM.Netcore.psm1</S>
+          <S N="GUID">D48D710E-85CB-46A1-990F-22DAE76F6B5F</S>
+          <S N="PowerShellVersion">5.1</S>
+          <S N="CompanyName">Microsoft Corporation</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">/Users/sureshbikmal/microsoft/powershell/Modules/AzureRM.Netcore/0.10.0</S>
+    </MS>
+  </Obj>
+</Objs>
